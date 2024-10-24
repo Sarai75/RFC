@@ -25,6 +25,7 @@ namespace csharp
             //
             
             InitializeComponent();
+            //añadiremos los semestres al comboBox
             comboBoxsemes.Items.AddRange(new string[]
             {
                  "1er Semestre",
@@ -40,6 +41,7 @@ namespace csharp
             //
         }
         
+        //Aqui se limpiaran los datos que estan en los txt, comboBox.
         void BtnLimpiarClick(object sender, EventArgs e)
         {
             txtnombre.Clear();
@@ -55,39 +57,46 @@ namespace csharp
         
         void BtncalcularClick(object sender, EventArgs e)
         {
+        	// Obtiene el nombre y verifica que no esté vacío.
             string nombre = txtnombre.Text.Trim().ToUpper();            
             if (nombre == null || nombre.Trim() == "") 
-            {
-                MessageBox.Show("Debes llenar el campo de Nombre");
-            }
+	            {
+	                MessageBox.Show("Debes llenar el campo de Nombre");
+	            }
             else
             {
-            string apellido1 = txtapellido1.Text.Trim().ToUpper();
+            	 // Obtiene el primer apellido y verifica que no esté vacío.
+            	string apellido1 = txtapellido1.Text.Trim().ToUpper();
             if (apellido1 == null || apellido1.Trim() == "") 
-            {
-                MessageBox.Show("Debes llenar el campo de Primer apellido");
-            }
+            	{
+                	MessageBox.Show("Debes llenar el campo de Primer apellido");
+            	}
             else
-            {
-            string apellido2 = txtapellido2.Text.Trim().ToUpper();
-            if (apellido2 == null || apellido2.Trim() == "") 
-            {
-                MessageBox.Show("Debes llenar el campo de Segundo apellido");
-            }
+            	{
+            		// Crea el RFC a partir de los datos ingresados.
+            		string apellido2 = txtapellido2.Text.Trim().ToUpper();
+            		if (apellido2 == null || apellido2.Trim() == "") 
+	            	{
+	                	MessageBox.Show("Debes llenar el campo de Segundo apellido");
+	            	}
             
-            
-            string telefono=txttelefono.Text;
-            string direccion=txtdireccion.Text;
-            string semestre=comboBoxsemes.SelectedItem.ToString();
-            DateTime fechaNacimiento=dtpfnacimiento.Value;
-            
-            Random random = new Random();
-            string h =random.Next(100000, 999999).ToString("D6");
-             
-            string rfc = apellido1.Substring(0, 2) + apellido2.Substring(0, 1) + nombre.Substring(0, 1) +
-            fechaNacimiento.ToString("yyMMdd")+h.Substring(0,3);
-            lblRFC.Text = "RFC: " + rfc;
-            }
+			            // Obtiene otros datos ingresados.
+			            string telefono=txttelefono.Text;
+			            string direccion=txtdireccion.Text;
+			            string semestre=comboBoxsemes.SelectedItem.ToString();
+			            DateTime fechaNacimiento=dtpfnacimiento.Value;
+			            
+			            // Genera un número aleatorio para el RFC
+			            Random random = new Random();
+			            string h =random.Next(100000, 999999).ToString("D6");
+		             	
+			            // Crea el RFC a partir de los datos ingresados
+			            string rfc = apellido1.Substring(0, 2) + apellido2.Substring(0, 1) + nombre.Substring(0, 1) +
+			            fechaNacimiento.ToString("yyMMdd")+h.Substring(0,3);
+		            	
+			            // Muestra el RFC en el label
+		            	lblRFC.Text = "RFC: " + rfc;
+            	}
             } 
         }
     }

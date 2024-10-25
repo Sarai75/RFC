@@ -19,3 +19,4 @@ C:\Users\CC1_PC11\Documents\sharp\SharpDevelop Projects\csharp\csharp\obj\Debug\
 C:\Users\CC1_PC11\Documents\sharp\SharpDevelop Projects\csharp\csharp\bin\Debug\csharp.exe
 C:\Users\CC1_PC11\Documents\sharp\SharpDevelop Projects\csharp\csharp\bin\Debug\csharp.pdb
 C:\Users\CC1_PC11\Documents\sharp\SharpDevelop Projects\csharp\csharp\obj\Debug\csharp.pdb
+C:\Users\CC1_PC11\Documents\sharp\SharpDevelop Projects\csharp\csharp\obj\Debug\csharp.Form1.resources

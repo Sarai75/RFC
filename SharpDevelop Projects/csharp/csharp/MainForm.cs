@@ -84,6 +84,9 @@ namespace csharp
 			            string telefono=txttelefono.Text;
 			            string direccion=txtdireccion.Text;
 			            string semestre=comboBoxsemes.SelectedItem.ToString();
+						if (semestre != null) {
+							
+						}
 			            DateTime fechaNacimiento=dtpfnacimiento.Value;
 			            
 			            // Genera un número aleatorio para el RFC
@@ -93,9 +96,11 @@ namespace csharp
 			            // Crea el RFC a partir de los datos ingresados
 			            string rfc = apellido1.Substring(0, 2) + apellido2.Substring(0, 1) + nombre.Substring(0, 1) +
 			            fechaNacimiento.ToString("yyMMdd")+h.Substring(0,3);
-		            	
-			            // Muestra el RFC en el label
-		            	lblRFC.Text = "RFC: " + rfc;
+			            string nombrecompleto = nombre + apellido1 + apellido2;
+			            Form1 calculo = new Form1();
+			            calculo.name=nombrecompleto;
+			            calculo.Show();
+			            
             	}
             } 
         }

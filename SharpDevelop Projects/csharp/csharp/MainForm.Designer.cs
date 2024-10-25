@@ -52,8 +52,6 @@ namespace csharp
 			this.dtpfnacimiento = new System.Windows.Forms.DateTimePicker();
 			this.label8 = new System.Windows.Forms.Label();
 			this.btnLimpiar = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.lblRFC = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// txtnombre
@@ -184,30 +182,12 @@ namespace csharp
 			this.btnLimpiar.UseVisualStyleBackColor = true;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(119, 205);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(125, 23);
-			this.label1.TabIndex = 17;
-			this.label1.Text = "Aqui se mostrata el RFC";
-			// 
-			// lblRFC
-			// 
-			this.lblRFC.Location = new System.Drawing.Point(90, 228);
-			this.lblRFC.Name = "lblRFC";
-			this.lblRFC.Size = new System.Drawing.Size(199, 23);
-			this.lblRFC.TabIndex = 18;
-			this.lblRFC.Text = "*****";
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
 			this.ClientSize = new System.Drawing.Size(301, 325);
-			this.Controls.Add(this.lblRFC);
-			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.dtpfnacimiento);
@@ -229,8 +209,6 @@ namespace csharp
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
-		private System.Windows.Forms.Label lblRFC;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnLimpiar;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.DateTimePicker dtpfnacimiento;
